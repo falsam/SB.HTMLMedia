@@ -1,21 +1,13 @@
 ﻿;SB 2.00 - Audio Player
 
 XIncludeFile "htmlmedia.sbi"
-OpenWindow(0, 0, 0, 800, 600, "Test : Shoutcast", #PB_Window_SystemMenu |#PB_Window_ScreenCentered | #PB_Window_SizeGadget )
-
-;Add first shoutcast autoplay = #True
-AudioPlayer(1, 50, 10, "http://server1.chilltrax.com:9000/;", #True, #False)
-MediaVolume(1, 0.5)
-
-;Second shoutcast
-AudioPlayer(2, 50, 100, "http://5.39.71.159:8110/stream")
-MediaSource(2, "http://stream1.chantefrance.com/Chante_France")
+OpenWindow(0, 0, 0, 800, 600, "Audio Player", #PB_Window_ScreenCentered)
 
 ;mp3
 TextGadget(#PB_Any, 50, 150, 100, 22, "Wings.mp3")
 AudioPlayer(3, 50, 180, "Wings.mp3")
 ; IDE Options = SpiderBasic 2.00 beta 2 (Windows - x86)
-; CursorPosition = 15
+; CursorPosition = 7
 ; HtmlFilename = audioplayer.html
 ; JavaScriptFilename = audioplayer.js
 ; JavaScriptPath = sb
