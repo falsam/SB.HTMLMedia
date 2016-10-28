@@ -1,0 +1,17 @@
+﻿;SB 2.00 - Video Player
+
+XIncludeFile "htmlmedia.sbi"
+OpenWindow(0, 0, 0, 600, 400, "Video Player", #PB_Window_ScreenCentered)
+
+;Video player
+VideoPlayer(0, 0, 0, 600, 400, "http://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_1080p_stereo.ogg", #True)
+MediaVolume(0, 0.5)
+; IDE Options = SpiderBasic 2.00 beta 2 (Windows - x86)
+; CursorPosition = 4
+; HtmlFilename = videoplayer.html
+; JavaScriptFilename = videoplayer.js
+; JavaScriptPath = sb
+; OptimizeJS
+; CopyJavaScriptLibrary
+; EnableXP
+; CompileSourceDirectory
