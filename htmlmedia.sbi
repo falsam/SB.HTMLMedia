@@ -1,0 +1,68 @@
+﻿Procedure.i WindowElement(Window, UseJquery.b=#True)
+  Protected winObject=WindowID(Window) 
+  
+  !return (v_winobject && v_winobject.element)? v_usejquery? $(v_winobject.element):v_winobject.element:null; 
+EndProcedure
+
+Procedure AudioPlayer(id, x, y, stream.s, autoplay=#False, hide=#False)
+  Protected windowObject=WindowElement(0)
+  Protected flag.s = ""
+  
+  If autoplay = #True
+    flag = "controls autoplay"
+  EndIf
+  
+  ! var selector = v_windowobject.find('.spiderwindow-content') 
+  ! selector.append('<audio id = player_' + v_id + " controls src=" + v_stream +" " + v_flag +"></audio>")
+  
+  If hide = #False
+    ! selector = $('#player_' + v_id)  
+    ! selector.css("position", "absolute");
+    ! selector.css("left", v_x);
+    ! selector.css("top", v_y);
+  Else
+    !selector.hide()
+  EndIf
+EndProcedure
+
+Procedure VideoPlayer(id, x, y, width, height, stream.s, autoplay=#False)
+  Protected windowObject=WindowElement(0)
+  Protected flag.s = ""
+  
+  If autoplay = #True
+    flag = "controls autoplay"
+  EndIf
+  
+  ! var selector = v_windowobject.find('.spiderwindow-content') 
+  ! selector.append('<video id = player_' + v_id + ' width=' + v_width + " height=" + v_height + " controls src=" + v_stream +" " + v_flag +"></audio>")
+  
+  ! selector = $('#player_' + v_id)  
+  ! selector.css("position", "absolute");
+  ! selector.css("left", v_x);
+  ! selector.css("top", v_y);
+EndProcedure
+
+
+;Change volume
+Procedure MediaVolume(id, value.f)
+  ! var selector = document.getElementById("player_" + v_id);
+  ! selector.volume = v_value;  
+EndProcedure
+
+;Change source
+Procedure MediaSource(id, value.s)
+  ! var selector = document.getElementById("player_" + v_id);
+  ! selector.src = v_value;  
+EndProcedure
+
+Procedure MediaStop(id)
+  ! var selector = document.getElementById("player_" + v_id);
+  ! selector.pause()  
+EndProcedure
+
+; IDE Options = SpiderBasic 1.40 (Windows - x86)
+; CursorPosition = 41
+; FirstLine = 2
+; Folding = --
+; EnableXP
+; CompileSourceDirectory
